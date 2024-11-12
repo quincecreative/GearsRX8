@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>Fixed Joint countertrack</title>
+
+    <!-- Babylon.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.2/dat.gui.min.js"></script>
+    <script src="https://assets.babylonjs.com/generated/Assets.js"></script>
+    <script src="https://cdn.babylonjs.com/recast.js"></script>
+    <script src="https://cdn.babylonjs.com/ammo.js"></script>
+    <script src="https://cdn.babylonjs.com/havok/HavokPhysics_umd.js"></script>
+    <script src="https://cdn.babylonjs.com/cannon.js"></script>
+    <script src="https://cdn.babylonjs.com/Oimo.js"></script>
+    <script src="https://cdn.babylonjs.com/earcut.min.js"></script>
+    <script src="https://cdn.babylonjs.com/babylon.js"></script>
+    <script src="https://cdn.babylonjs.com/materialsLibrary/babylonjs.materials.min.js"></script>
+    <script src="https://cdn.babylonjs.com/proceduralTexturesLibrary/babylonjs.proceduralTextures.min.js"></script>
+    <script src="https://cdn.babylonjs.com/postProcessesLibrary/babylonjs.postProcess.min.js"></script>
+    <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.js"></script>
+    <script src="https://cdn.babylonjs.com/serializers/babylonjs.serializers.min.js"></script>
+    <script src="https://cdn.babylonjs.com/gui/babylon.gui.min.js"></script>
+    <script src="https://cdn.babylonjs.com/inspector/babylon.inspector.bundle.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="canvasZone"><canvas id="renderCanvas"></canvas></div>
+    <header id="header">
+      <div id="topPart">
+        <img width="150" height="100" src="gkn-au-stacked.svg" alt="icon" id="icon" />
+        <!-- <div id="linkAndSerch">
+          <a href="/">Contact</a><a href="/">Careers</a>
+
+          <button></button>
+        </div> -->
+        <h2>Fixed Joint countertrack</h2>
+      </div>
+    </header>
+    <div id="desBox">
+      <div id="desVideoBox">
+        <video width="100%" height="auto" controls>
+          <source src="ERADtext3-short.mp4" type="video/mp4" />
+
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div id="desTextBox">
+        <h2>Fixed Joint countertrack</h2>
+        <div>
+          GKN Automotive's CountertrackTMfixed joint uses the principle of “opposed tracks” for
+          significant efficiency improvement and packaging reduction. It combines this with a
+          specific track profile in longitudinal direction to allow angles of up to 52 degrees. This
+          breakthrough technology sets the new benchmark for constant velocity joints (CVJ).
+        </div>
+        <h3>Benefits</h3>
+        <ul>
+          <li>High Efficiency</li>
+          <li>Optimum Packaging</li>
+          <li>Compared to conventional Rzeppatype joints</li>
+          <li>Reduction of losses by 50 -60%</li>
+          <li>Weight down of up to 15%</li>
+          <li>Packaging reduction of up to 8%</li>
+        </ul>
+
+        <h3>Technical features</h3>
+        <ul>
+          <li>50°(52°Max) Articulation angle</li>
+          <li>8 Ball Joint</li>
+          <li>Countertrack Technology with S-shape track design</li>
+        </ul>
+        <h3>Operating Principle</h3>
+        <div>
+          Designed for FWD and AWD applications with efficiency improvement of the entire drivetrain
+          is required.
+        </div>
+      </div>
+    </div>
+    <button id="cameraBtn">
+      <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/home.png" alt="home" />
+    </button>
+    <button id="openBtn">
+      <img
+        width="50"
+        height="50"
+        src="https://img.icons8.com/ios-filled/50/split-files.png"
+        alt="split-files"
+      />
+    </button>
+    <!-- <button id="playBtn">
+      <img
+        width="64"
+        height="64"
+        src="https://img.icons8.com/sf-black-filled/64/play.png"
+        alt="play"
+      />
+    </button> -->
+
+    <script src="main.js"></script>
+  </body>
+</html>
