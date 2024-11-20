@@ -32,7 +32,7 @@ const createScene = () => {
   camera.target = new BABYLON.Vector3(0.04, 0, 0);
   camera.attachControl(canvas, true);
   camera.wheelDeltaPercentage = 0.01;
-  camera.position = new BABYLON.Vector3(0.37392329975878424, 0.5791733841353875, 5.985874550769852);
+  camera.position = new BABYLON.Vector3(0.43246934946106763, 0.8207297361144514, 5.930629857779956);
   scene.activeCamera.panningSensibility = 3000;
   camera.pinchPrecision = 100;
   camera.minZ = 0;
@@ -115,7 +115,7 @@ const createScene = () => {
     });
     keyFramesP.push({
       frame: 180,
-      value: new BABYLON.Vector3(0.37392329975878424, 0.5791733841353875, 5.985874550769852),
+      value: new BABYLON.Vector3(0.43246934946106763, 0.8207297361144514, 5.930629857779956),
     });
     cameraStartP.setKeys(keyFramesP);
     camera.animations.push(cameraStartP);
@@ -128,7 +128,7 @@ const createScene = () => {
     });
     keyFramesPA.push({
       frame: 180,
-      value: new BABYLON.Vector3(0.7278924314354879, 1.3533384720273138, 10.219610139242203),
+      value: new BABYLON.Vector3(0.9538220533640867, 1.7978254809750671, 13.586775550485717),
     });
     cameraPA.setKeys(keyFramesPA);
     camera.animations.push(cameraPA);
@@ -181,19 +181,49 @@ const createScene = () => {
   // label.text = "Part bla bla bla";
   // rect1.addControl(label);
 
+  // let image = document.getElementById("image");
+
   // let target1 = new BABYLON.GUI.Rectangle();
   // target1.width = "60px";
   // target1.cornerRadius = 40;
   // target1.height = "60px";
   // // target.color = "#cfcfcf";
   // target1.thickness = 0;
-  // target1.background = "#fc3";
+  // target1.background = "#1a2b42";
   // target1.alpha = 1;
 
   // advancedTexture.addControl(target1);
 
+  // let target11 = new BABYLON.GUI.Rectangle();
+  // target11.width = "40px";
+  // target11.cornerRadius = 40;
+  // target11.height = "40px";
+  // // target.color = "#cfcfcf";
+  // target11.thickness = 0;
+  // target11.background = "#154073";
+  // target11.alpha = 1;
+
+  // target11._localDraw = (function () {
+  //   let image = new Image();
+  //   image.src = "Cheveron_process copy-frei.png";
+  //   // image.addEventListener("load", () => {
+  //   //   stackPanel._markAsDirty();
+  //   // });
+  //   return function (context) {
+  //     context.drawImage(
+  //       image,
+  //       this._currentMeasure.left,
+  //       this._currentMeasure.top,
+  //       this._currentMeasure.width,
+  //       this._currentMeasure.height
+  //     );
+  //   };
+  // })();
+
+  // target1.addControl(target11);
+
   // let text1 = new BABYLON.GUI.TextBlock();
-  // text1.text = "X";
+  // text1.text = "";
   // text1.color = "black";
   // text1.fontSize = "30px";
   // text1.fontWeight = 500;
@@ -201,31 +231,26 @@ const createScene = () => {
   // target1.addControl(text1);
 
   // let desBox = document.getElementById("desBox");
-  // desBox.style.left = "100vw";
+  // let desBoxText = document.getElementById("desTextBox");
 
-  // target1.onPointerEnterObservable.add(() => {
-  //   target1.width = "180px";
-  //   text1.text = "X Gear Set";
-  // });
-  // target1.onPointerOutObservable.add(() => {
-  //   target1.width = "60px";
-  //   text1.text = "X";
-  // });
+  // // target1.onPointerEnterObservable.add(() => {
+  // //     target1.width = "180px";
+  // //     text1.text = " Gear Set";
+  // // });
+  // // target1.onPointerOutObservable.add(() => {
+  // //     target1.width = "60px";
+  // //     text1.text = "";
+  // // });
 
   // target1.onPointerClickObservable.add(() => {
-  //   desBox.style.visibility = "visible";
-  //   console.log(desBox.style.left);
-  //   if (desBox.style.left == "100vw") {
-  //     // desBox.style.display = "flex";
-  //     desBox.style.left = "80vw";
-  //     // canvasZone.style.width = "80%";
-  //     // engine.resize();
-  //   } else {
-  //     // canvasZone.style.width = "100%";
-  //     desBox.style.left = "100vw";
-  //     // engine.resize();
-  //     // desBox.style.display = "none";
-  //   }
+  //   desBoxText.innerHTML =
+  //     " <h2>Gear Set</h2><ul><li>Our products cover the required torque range for passenger and light commercial vehicles, independent of propulsion systems</li><li>Available bevel gear sizes range from a spherical diameter of 64mm to 120mm</li><li>Tooth counts allows for assemblly as 2-pinion or 4-pinion variants</li ><li>Flat-back side gear design enables lowest backlash and the option of selective shimming, while providing the smallest bearing span.</li> </ul>";
+  //   // desBox.style.visibility = "visible";
+  //   // console.log(desBox.style.left);
+  //  image.src = "gear.JPG";
+
+  //   // canvasZone.style.width = "100%";
+  //   desBox.style.zIndex = 101;
   // });
   // let target2 = new BABYLON.GUI.Rectangle();
   // target2.width = "60px";
@@ -233,176 +258,66 @@ const createScene = () => {
   // target2.height = "60px";
   // // target.color = "#cfcfcf";
   // target2.thickness = 0;
-  // target2.background = "#fc3";
+  // target2.background = "#1a2b42";
   // target2.alpha = 1;
 
   // advancedTexture.addControl(target2);
 
+  // let target22 = new BABYLON.GUI.Rectangle();
+  // target22.width = "40px";
+  // target22.cornerRadius = 40;
+  // target22.height = "40px";
+  // // target.color = "#cfcfcf";
+  // target22.thickness = 0;
+  // target22.background = "#154073";
+  // target22.alpha = 1;
+
+  // target22._localDraw = (function () {
+  //   let image = new Image();
+  //   image.src = "Cheveron_process copy-frei.png";
+  //   // image.addEventListener("load", () => {
+  //   //   stackPanel._markAsDirty();
+  //   // });
+  //   return function (context) {
+  //     context.drawImage(
+  //       image,
+  //       this._currentMeasure.left,
+  //       this._currentMeasure.top,
+  //       this._currentMeasure.width,
+  //       this._currentMeasure.height
+  //     );
+  //   };
+  // })();
+
+  // target2.addControl(target22);
+
   // let text2 = new BABYLON.GUI.TextBlock();
-  // text2.text = "X";
+  // text2.text = "";
   // text2.color = "black";
   // text2.fontSize = "30px";
   // text2.fontWeight = 500;
 
   // target2.addControl(text2);
 
-  // target2.onPointerEnterObservable.add(() => {
-  //   target2.width = "180px";
-  //   text2.text = "X Housing";
-  // });
-  // target2.onPointerOutObservable.add(() => {
-  //   target2.width = "60px";
-  //   text2.text = "X";
-  // });
+  // // target2.onPointerEnterObservable.add(() => {
+  // //     target2.width = "180px";
+  // //     text2.text = " Housing";
+  // // });
+  // // target2.onPointerOutObservable.add(() => {
+  // //     target2.width = "60px";
+  // //     text2.text = "";
+  // // });
 
   // target2.onPointerClickObservable.add(() => {
-  //   desBox.style.visibility = "visible";
-  //   console.log(desBox.style.left);
-  //   if (desBox.style.left == "100vw") {
-  //     // desBox.style.display = "flex";
-  //     desBox.style.left = "80vw";
-  //     // canvasZone.style.width = "80%";
-  //     // engine.resize();
-  //   } else {
-  //     // canvasZone.style.width = "100%";
-  //     desBox.style.left = "100vw";
-  //     // engine.resize();
-  //     // desBox.style.display = "none";
-  //   }
+  //   desBoxText.innerHTML =
+  //     " <h2>Housing</h2><ul><li>Our state-of-the-art differential housings can be tailored to meet the required customer packaging spaces and interface dimensions</li><li>Available variants : <ul><li>Single-piece housing for 2-pinion layouts</li><li>Two-piece housing for 4-pinion layouts</li><li>AWD variants with internal or external splines for PTU connection</li><li>Differential integrated into planetary carriers</li></ul></li><li>Final drive gears can be welded or bolted, depending on customer preferences.</li></ul>";
+  //   // desBox.style.visibility = "visible";
+  //   // console.log(desBox.style.left);
+  //    image.src = "housing.JPG";
+
+  //   // canvasZone.style.width = "100%";
+  //   desBox.style.zIndex = 101;
   // });
-
-  // let target3 = new BABYLON.GUI.Rectangle();
-  // target3.width = "60px";
-  // target3.cornerRadius = 40;
-  // target3.height = "60px";
-  // // target.color = "#cfcfcf";
-  // target3.thickness = 0;
-  // target3.background = "#fc3";
-  // target3.alpha = 1;
-
-  // advancedTexture.addControl(target3);
-
-  // let text3 = new BABYLON.GUI.TextBlock();
-  // text3.text = "X";
-  // text3.color = "black";
-  // text3.fontSize = "30px";
-  // text3.fontWeight = 500;
-
-  // target3.addControl(text3);
-
-  // target3.onPointerEnterObservable.add(() => {
-  //   target3.width = "180px";
-  //   text3.text = "X Motor";
-  // });
-  // target3.onPointerOutObservable.add(() => {
-  //   target3.width = "60px";
-  //   text3.text = "X";
-  // });
-
-  // target3.onPointerClickObservable.add(() => {
-  //   desBox.style.visibility = "visible";
-  //   console.log(desBox.style.left);
-  //   if (desBox.style.left == "100vw") {
-  //     // desBox.style.display = "flex";
-  //     desBox.style.left = "80vw";
-  //     // canvasZone.style.width = "80%";
-  //     // engine.resize();
-  //   } else {
-  //     // canvasZone.style.width = "100%";
-  //     desBox.style.left = "100vw";
-  //     // engine.resize();
-  //     // desBox.style.display = "none";
-  //   }
-  // });
-
-  // let target4 = new BABYLON.GUI.Rectangle();
-  // target4.width = "60px";
-  // target4.cornerRadius = 40;
-  // target4.height = "60px";
-  // // target.color = "#cfcfcf";
-  // target4.thickness = 0;
-  // target4.background = "#fc3";
-  // target4.alpha = 1;
-
-  // advancedTexture.addControl(target4);
-
-  // let text4 = new BABYLON.GUI.TextBlock();
-  // text4.text = "X";
-  // text4.color = "black";
-  // text4.fontSize = "30px";
-  // text4.fontWeight = 500;
-
-  // target4.addControl(text4);
-
-  // target4.onPointerEnterObservable.add(() => {
-  //   target4.width = "180px";
-  //   text4.text = "X Coupling";
-  // });
-  // target4.onPointerOutObservable.add(() => {
-  //   target4.width = "60px";
-  //   text4.text = "X";
-  // });
-
-  // target4.onPointerClickObservable.add(() => {
-  //   desBox.style.visibility = "visible";
-  //   console.log(desBox.style.left);
-  //   if (desBox.style.left == "100vw") {
-  //     // desBox.style.display = "flex";
-  //     desBox.style.left = "80vw";
-  //     // canvasZone.style.width = "80%";
-  //     // engine.resize();
-  //   } else {
-  //     // canvasZone.style.width = "100%";
-  //     desBox.style.left = "100vw";
-  //     // engine.resize();
-  //     // desBox.style.display = "none";
-  //   }
-  // });
-
-  // let target5 = new BABYLON.GUI.Rectangle();
-  // target5.width = "60px";
-  // target5.cornerRadius = 40;
-  // target5.height = "60px";
-  // // target.color = "#cfcfcf";
-  // target5.thickness = 0;
-  // target5.background = "#fc3";
-  // target5.alpha = 1;
-
-  // advancedTexture.addControl(target5);
-
-  // let text5 = new BABYLON.GUI.TextBlock();
-  // text5.text = "X";
-  // text5.color = "black";
-  // text5.fontSize = "30px";
-  // text5.fontWeight = 500;
-
-  // target5.addControl(text5);
-
-  // target5.onPointerEnterObservable.add(() => {
-  //   target5.width = "180px";
-  //   text5.text = "X Actuator";
-  // });
-  // target5.onPointerOutObservable.add(() => {
-  //   target5.width = "60px";
-  //   text5.text = "X";
-  // });
-
-  // target5.onPointerClickObservable.add(() => {
-  //   desBox.style.visibility = "visible";
-  //   console.log(desBox.style.left);
-  //   if (desBox.style.left == "100vw") {
-  //     // desBox.style.display = "flex";
-  //     desBox.style.left = "80vw";
-  //     // canvasZone.style.width = "80%";
-  //     // engine.resize();
-  //   } else {
-  //     // canvasZone.style.width = "100%";
-  //     desBox.style.left = "100vw";
-  //     // engine.resize();
-  //     // desBox.style.display = "none";
-  //   }
-  // });
-
   //   let br = 1;
   // target.onPointerClickObservable.add(() => {
   //   if (br == 1) {
@@ -420,6 +335,8 @@ const createScene = () => {
 
   let animationGroup;
   let meshe;
+  // target1.alpha = 0;
+  // target2.alpha = 0;
 
   document.getElementById("openBtn").addEventListener("click", function () {
     // animationGroupA.stop();
@@ -429,7 +346,7 @@ const createScene = () => {
       }
     }
     for (let i = 0; i < meshe.length; i++) {
-      if (meshe[i].name == "Mesh_1") {
+      if (meshe[i].name == "7410480471_CATPART__A_1") {
         if (meshe[i].visibility == 0) {
           scene.beginDirectAnimation(meshe[i], [meshAlpha], 60, 1, false);
         }
@@ -437,6 +354,9 @@ const createScene = () => {
     }
 
     if (opened) {
+      desBox.style.zIndex = 0;
+      //   target1.alpha = 0;
+      //   target2.alpha = 0;
       // animationGroups[0].stop();
       if (animationGroupS.isStarted) {
         let masterFrame = animationGroupS.animatables[0].masterFrame;
@@ -457,6 +377,8 @@ const createScene = () => {
 
       opened = false;
     } else {
+      //   target1.alpha = 1;
+      //   target2.alpha = 1;
       // animationGroups[0].play();
 
       if (animationGroupS.isStarted) {
@@ -487,7 +409,7 @@ const createScene = () => {
   // document.getElementById("playBtn").addEventListener("click", function () {
   //   if (!opened) {
   //     for (let i = 0; i < meshe.length; i++) {
-  //       if (meshe[i].name == "Mesh_1") {
+  //       if (meshe[i].name == "7410480471_CATPART__A_1") {
   //         if (meshe[i].visibility != 0) {
   //           scene.beginDirectAnimation(meshe[i], [meshAlpha], 1, 60, false);
   //         } else {
@@ -515,11 +437,8 @@ const createScene = () => {
 
   let animationGroupS = new BABYLON.AnimationGroup("GroupS");
   // let animationGroupA = new BABYLON.AnimationGroup("GroupA");
-  let sphereTargetHousing = BABYLON.MeshBuilder.CreateSphere("sphere", { diameter: 0.01 }, scene);
+  let sphereTargetHousing = BABYLON.MeshBuilder.CreateSphere("sphere", { diameter: 1 }, scene);
   sphereTargetHousing.visibility = 0;
-
-  let sphereTargetMotor = BABYLON.MeshBuilder.CreateSphere("sphere", { diameter: 0.01 }, scene);
-  sphereTargetMotor.visibility = 0;
 
   BABYLON.SceneLoader.ImportMesh(
     "",
@@ -528,58 +447,36 @@ const createScene = () => {
     scene,
     (meshes, particleSystem, skeleton, animationGroups) => {
       meshes[0].scaling = new BABYLON.Vector3(27, 27, 27);
+      // meshes[0].position = new BABYLON.Vector3(0, -0.1, 0);
+      // meshes[0].rotation = new BABYLON.Vector3(0.2, 0.5, 0);
 
       animationGroup = animationGroups;
 
       meshe = meshes;
-      for (let i = 0; i < meshes.length; i++) {
-        // console.log(meshes[i].material);
-        // if (meshes[i].material != null) {
-        //   meshes[i].material._roughness = 0.1;
-        // }
-        // if (meshes[i].name == "7010542778_primitive1") {
-        //   sphereTargetHousing.parent = meshes[i];
-        //   sphereTargetHousing.position.z = -0.04;
-        //   sphereTargetHousing.position.y = 0.03;
-        //   // console.log("Mesh position:", meshes[i].position);
-        //   // console.log("Mesh bounding info:", meshes[i].getBoundingInfo().boundingBox);
-        //   // console.log("Target position:", target2.centerY);
-        //   meshes[i].material.needDepthPrePass = true;
-        //   meshes[i].material.alpha = 0;
-        //   meshes[i].material.alpha = 1;
-        //   target2.linkWithMesh(sphereTargetHousing);
-        //   // target2.linkOffsetY = -150;
-        // }
-        // if (meshes[i].name == "1600064752") {
-        //   sphereTargetMotor.parent = meshes[i];
-        //   // sphereTargetMotor.position.z = -0.04;
-        //   // console.log("Mesh position:", meshes[i].position);
-        //   // console.log("Mesh bounding info:", meshes[i].getBoundingInfo().boundingBox);
-        //   // console.log("Target position:", target2.centerY);
-        //   target3.linkWithMesh(sphereTargetMotor);
-        // }
-        // if (meshes[i].name == "1600032007_PRT__A_4.001") {
-        //   // sphereTargetMotor.position.z = -0.04;
-        //   // console.log("Mesh position:", meshes[i].position);
-        //   // console.log("Mesh bounding info:", meshes[i].getBoundingInfo().boundingBox);
-        //   // console.log("Target position:", target2.centerY);
-        //   target1.linkWithMesh(meshes[i]);
-        // }
-        // if (meshes[i].name == "Mesh_33") {
-        //   // sphereTargetMotor.position.z = -0.04;
-        //   // console.log("Mesh position:", meshes[i].position);
-        //   // console.log("Mesh bounding info:", meshes[i].getBoundingInfo().boundingBox);
-        //   // console.log("Target position:", target2.centerY);
-        //   target4.linkWithMesh(meshes[i]);
-        // }
-        // if (meshes[i].name == "Mesh_22_primitive0") {
-        //   // sphereTargetMotor.position.z = -0.04;
-        //   // console.log("Mesh position:", meshes[i].position);
-        //   // console.log("Mesh bounding info:", meshes[i].getBoundingInfo().boundingBox);
-        //   // console.log("Target position:", target2.centerY);
-        //   target5.linkWithMesh(meshes[i]);
-        // }
-      }
+      // for (let i = 0; i < meshes.length; i++) {
+      //   // console.log(meshes[i].material);
+      //   // if (meshes[i].material != null) {
+      //   //   meshes[i].material._roughness = 0.1;
+      //   // }
+
+      //   if (meshes[i].name == "7010542778_primitive1") {
+      //     sphereTargetHousing.parent = meshes[i];
+      //     sphereTargetHousing.position.z = -0.04;
+      //     sphereTargetHousing.position.y = 0.03;
+
+      //     // console.log("Mesh position:", meshes[i].position);
+      //     // console.log("Mesh bounding info:", meshes[i].getBoundingInfo().boundingBox);
+      //     // console.log("Target position:", target2.centerY);
+      //     meshes[i].material.needDepthPrePass = true;
+      //     target2.linkWithMesh(sphereTargetHousing);
+      //     // target2.linkOffsetY = -150;
+      //   }
+
+      //   if (meshes[i].name == "7010542776_primitive0") {
+      //     target1.linkWithMesh(meshes[i]);
+      //     // target2.linkOffsetY = -150;
+      //   }
+      // }
 
       // let { min, max } = meshes[0].getHierarchyBoundingVectors();
 
@@ -603,7 +500,7 @@ const createScene = () => {
         }
       }
       // animationGroupA.normalize(0, 120);
-      animationGroupS.normalize(0, 180);
+      animationGroupS.normalize(0, 250);
 
       // animationGroupA.stop();
       // animationGroupS.stop();
@@ -621,6 +518,25 @@ const createScene = () => {
       // for (let i = 0; i < meshes.length; i++) {
       //   meshes[i].material = yellowMat;
       // }
+
+      scene.onBeforeRenderObservable.add(() => {
+        // if (opened) {
+        //   if (target1.alpha < 1) {
+        //     console.log(target1.alpha);
+        //     target1.alpha += 0.05;
+        //     target2.alpha += 0.05;
+        //   }
+        // } else if (target1.alpha > 0) {
+        //   console.log(target1.alpha);
+        //   target1.alpha -= 0.05;
+        //   target2.alpha -= 0.05;
+        //   if (target1.alpha < 0.01) {
+        //     target1.alpha = 0;
+        //     target2.alpha = 0;
+        //   }
+        // }
+      });
+
       scene.onPointerObservable.add((pointerInfo) => {
         // switch (pointerInfo.type) {
         //   case BABYLON.PointerEventTypes.POINTERPICK:
