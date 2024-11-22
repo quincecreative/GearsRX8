@@ -327,7 +327,7 @@ const createScene = () => {
   // target1.alpha = 0;
   // target2.alpha = 0;
     document.getElementById("cameraBtn").addEventListener("click", function () {
-    console.log(camera.position);
+    
     if (opened) {
           desBox.style.zIndex = 0;
       //   target1.alpha = 0;
@@ -356,7 +356,7 @@ const createScene = () => {
       // scene.beginDirectAnimation(camera, [cameraStartP, cameraStartT], 1, 60, false);
     }
 
-    console.log(camera.position);
+ 
     // camera.target = new BABYLON.Vector3(0, 0, 0);
     // console.log(camera._currentTarget);
   });
