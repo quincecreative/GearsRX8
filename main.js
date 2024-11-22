@@ -149,7 +149,6 @@ const createScene = () => {
 
   let advancedTexture = BABYLON.GUI.AdvancedDynamicTexture.CreateFullscreenUI("UI");
 
-
   // var rect1 = new BABYLON.GUI.Rectangle();
 
   // rect1.width = 0.2;
@@ -170,166 +169,213 @@ const createScene = () => {
   // label.text = "Part bla bla bla";
   // rect1.addControl(label);
 
-  // let image = document.getElementById("image");
+  let image = document.getElementById("image");
 
-  // let target1 = new BABYLON.GUI.Rectangle();
-  // target1.width = "60px";
-  // target1.cornerRadius = 40;
-  // target1.height = "60px";
-  // // target.color = "#cfcfcf";
-  // target1.thickness = 0;
-  // target1.background = "#1a2b42";
-  // target1.alpha = 1;
+  let target1 = new BABYLON.GUI.Rectangle();
+  target1.width = "60px";
+  target1.cornerRadius = 40;
+  target1.height = "60px";
+  // target.color = "#cfcfcf";
+  target1.thickness = 0;
+  target1.background = "#1a2b42";
+  target1.alpha = 1;
 
-  // advancedTexture.addControl(target1);
+  advancedTexture.addControl(target1);
 
-  // let target11 = new BABYLON.GUI.Rectangle();
-  // target11.width = "40px";
-  // target11.cornerRadius = 40;
-  // target11.height = "40px";
-  // // target.color = "#cfcfcf";
-  // target11.thickness = 0;
-  // target11.background = "#154073";
-  // target11.alpha = 1;
+  let target11 = new BABYLON.GUI.Rectangle();
+  target11.width = "40px";
+  target11.cornerRadius = 40;
+  target11.height = "40px";
+  // target.color = "#cfcfcf";
+  target11.thickness = 0;
+  target11.background = "#154073";
+  target11.alpha = 1;
 
-  // target11._localDraw = (function () {
-  //   let image = new Image();
-  //   image.src = "Cheveron_process copy-frei.png";
-  //   // image.addEventListener("load", () => {
-  //   //   stackPanel._markAsDirty();
-  //   // });
-  //   return function (context) {
-  //     context.drawImage(
-  //       image,
-  //       this._currentMeasure.left,
-  //       this._currentMeasure.top,
-  //       this._currentMeasure.width,
-  //       this._currentMeasure.height
-  //     );
-  //   };
-  // })();
+  target11._localDraw = (function () {
+    let image = new Image();
+    image.src = "Cheveron_process copy-frei.png";
+    // image.addEventListener("load", () => {
+    //   stackPanel._markAsDirty();
+    // });
+    return function (context) {
+      context.drawImage(
+        image,
+        this._currentMeasure.left,
+        this._currentMeasure.top,
+        this._currentMeasure.width,
+        this._currentMeasure.height
+      );
+    };
+  })();
 
-  // target1.addControl(target11);
+  target1.addControl(target11);
 
-  // let text1 = new BABYLON.GUI.TextBlock();
-  // text1.text = "";
-  // text1.color = "black";
-  // text1.fontSize = "30px";
-  // text1.fontWeight = 500;
+  let text1 = new BABYLON.GUI.TextBlock();
+  text1.text = "";
+  text1.color = "black";
+  text1.fontSize = "30px";
+  text1.fontWeight = 500;
 
-  // target1.addControl(text1);
+  target1.addControl(text1);
 
-  // let desBox = document.getElementById("desBox");
-  // let desBoxText = document.getElementById("desTextBox");
+  let desBox = document.getElementById("desBox");
+  let desBoxText = document.getElementById("desTextBox");
 
-  // // target1.onPointerEnterObservable.add(() => {
-  // //     target1.width = "180px";
-  // //     text1.text = " Gear Set";
-  // // });
-  // // target1.onPointerOutObservable.add(() => {
-  // //     target1.width = "60px";
-  // //     text1.text = "";
-  // // });
-
-  // target1.onPointerClickObservable.add(() => {
-  //   desBoxText.innerHTML =
-  //     " <h2>Gear Set</h2><ul><li>Our products cover the required torque range for passenger and light commercial vehicles, independent of propulsion systems</li><li>Available bevel gear sizes range from a spherical diameter of 64mm to 120mm</li><li>Tooth counts allows for assemblly as 2-pinion or 4-pinion variants</li ><li>Flat-back side gear design enables lowest backlash and the option of selective shimming, while providing the smallest bearing span.</li> </ul>";
-  //   // desBox.style.visibility = "visible";
-  //   // console.log(desBox.style.left);
-  //  image.src = "gear.JPG";
-
-  //   // canvasZone.style.width = "100%";
-  //   desBox.style.zIndex = 101;
+  // target1.onPointerEnterObservable.add(() => {
+  //     target1.width = "180px";
+  //     text1.text = " Gear Set";
   // });
-  // let target2 = new BABYLON.GUI.Rectangle();
-  // target2.width = "60px";
-  // target2.cornerRadius = 40;
-  // target2.height = "60px";
-  // // target.color = "#cfcfcf";
-  // target2.thickness = 0;
-  // target2.background = "#1a2b42";
-  // target2.alpha = 1;
-
-  // advancedTexture.addControl(target2);
-
-  // let target22 = new BABYLON.GUI.Rectangle();
-  // target22.width = "40px";
-  // target22.cornerRadius = 40;
-  // target22.height = "40px";
-  // // target.color = "#cfcfcf";
-  // target22.thickness = 0;
-  // target22.background = "#154073";
-  // target22.alpha = 1;
-
-  // target22._localDraw = (function () {
-  //   let image = new Image();
-  //   image.src = "Cheveron_process copy-frei.png";
-  //   // image.addEventListener("load", () => {
-  //   //   stackPanel._markAsDirty();
-  //   // });
-  //   return function (context) {
-  //     context.drawImage(
-  //       image,
-  //       this._currentMeasure.left,
-  //       this._currentMeasure.top,
-  //       this._currentMeasure.width,
-  //       this._currentMeasure.height
-  //     );
-  //   };
-  // })();
-
-  // target2.addControl(target22);
-
-  // let text2 = new BABYLON.GUI.TextBlock();
-  // text2.text = "";
-  // text2.color = "black";
-  // text2.fontSize = "30px";
-  // text2.fontWeight = 500;
-
-  // target2.addControl(text2);
-
-  // // target2.onPointerEnterObservable.add(() => {
-  // //     target2.width = "180px";
-  // //     text2.text = " Housing";
-  // // });
-  // // target2.onPointerOutObservable.add(() => {
-  // //     target2.width = "60px";
-  // //     text2.text = "";
-  // // });
-
-  // target2.onPointerClickObservable.add(() => {
-  //   desBoxText.innerHTML =
-  //     " <h2>Housing</h2><ul><li>Our state-of-the-art differential housings can be tailored to meet the required customer packaging spaces and interface dimensions</li><li>Available variants : <ul><li>Single-piece housing for 2-pinion layouts</li><li>Two-piece housing for 4-pinion layouts</li><li>AWD variants with internal or external splines for PTU connection</li><li>Differential integrated into planetary carriers</li></ul></li><li>Final drive gears can be welded or bolted, depending on customer preferences.</li></ul>";
-  //   // desBox.style.visibility = "visible";
-  //   // console.log(desBox.style.left);
-  //    image.src = "housing.JPG";
-
-  //   // canvasZone.style.width = "100%";
-  //   desBox.style.zIndex = 101;
+  // target1.onPointerOutObservable.add(() => {
+  //     target1.width = "60px";
+  //     text1.text = "";
   // });
-  //   let br = 1;
-  // target.onPointerClickObservable.add(() => {
-  //   if (br == 1) {
-  //     rect1.alpha = 0.5;
-  //     line.alpha = 0.5;
-  //     br = 0;
-  //   } else {
-  //     rect1.alpha = 0;
-  //     line.alpha = 0;
-  //     br = 1;
-  //   }
+
+  target1.onPointerClickObservable.add(() => {
+    desBoxText.innerHTML =
+      " <h2>Outer Race</h2><ul><li>Outer Race, tracks and sphere finished by forging, leading to minimum manufacturing effort and optimized endurance performance.</li></ul>";
+    // desBox.style.visibility = "visible";
+    // console.log(desBox.style.left);
+    image.src = "outerRace.JPG";
+
+    // canvasZone.style.width = "100%";
+    desBox.style.zIndex = 101;
+  });
+  let target2 = new BABYLON.GUI.Rectangle();
+  target2.width = "60px";
+  target2.cornerRadius = 40;
+  target2.height = "60px";
+  // target.color = "#cfcfcf";
+  target2.thickness = 0;
+  target2.background = "#1a2b42";
+  target2.alpha = 1;
+
+  advancedTexture.addControl(target2);
+
+  let target22 = new BABYLON.GUI.Rectangle();
+  target22.width = "40px";
+  target22.cornerRadius = 40;
+  target22.height = "40px";
+  // target.color = "#cfcfcf";
+  target22.thickness = 0;
+  target22.background = "#154073";
+  target22.alpha = 1;
+
+  target22._localDraw = (function () {
+    let image = new Image();
+    image.src = "Cheveron_process copy-frei.png";
+    // image.addEventListener("load", () => {
+    //   stackPanel._markAsDirty();
+    // });
+    return function (context) {
+      context.drawImage(
+        image,
+        this._currentMeasure.left,
+        this._currentMeasure.top,
+        this._currentMeasure.width,
+        this._currentMeasure.height
+      );
+    };
+  })();
+
+  target2.addControl(target22);
+
+  let text2 = new BABYLON.GUI.TextBlock();
+  text2.text = "";
+  text2.color = "black";
+  text2.fontSize = "30px";
+  text2.fontWeight = 500;
+
+  target2.addControl(text2);
+
+  target2.onPointerClickObservable.add(() => {
+    desBoxText.innerHTML =
+      " <h2>Inner Race</h2><ul><li>Inner Race assembled with a grading for excellent backlash, aligned to 4.0 Assembly Technology.</li></ul>";
+    // desBox.style.visibility = "visible";
+    // console.log(desBox.style.left);
+    image.src = "innerRace.JPG";
+
+    // canvasZone.style.width = "100%";
+    desBox.style.zIndex = 101;
+  });
+
+  let target3 = new BABYLON.GUI.Rectangle();
+  target3.width = "60px";
+  target3.cornerRadius = 40;
+  target3.height = "60px";
+  // target.color = "#cfcfcf";
+  target3.thickness = 0;
+  target3.background = "#1a2b42";
+  target3.alpha = 1;
+
+  advancedTexture.addControl(target3);
+
+  let target33 = new BABYLON.GUI.Rectangle();
+  target33.width = "40px";
+  target33.cornerRadius = 40;
+  target33.height = "40px";
+  // target.color = "#cfcfcf";
+  target33.thickness = 0;
+  target33.background = "#154073";
+  target33.alpha = 1;
+
+  target33._localDraw = (function () {
+    let image = new Image();
+    image.src = "Cheveron_process copy-frei.png";
+    // image.addEventListener("load", () => {
+    //   stackPanel._markAsDirty();
+    // });
+    return function (context) {
+      context.drawImage(
+        image,
+        this._currentMeasure.left,
+        this._currentMeasure.top,
+        this._currentMeasure.width,
+        this._currentMeasure.height
+      );
+    };
+  })();
+
+  target3.addControl(target33);
+
+  let text3 = new BABYLON.GUI.TextBlock();
+  text3.text = "";
+  text3.color = "black";
+  text3.fontSize = "30px";
+  text3.fontWeight = 500;
+
+  target3.addControl(text2);
+
+  // target2.onPointerEnterObservable.add(() => {
+  //     target2.width = "180px";
+  //     text2.text = " Housing";
   // });
+  // target2.onPointerOutObservable.add(() => {
+  //     target2.width = "60px";
+  //     text2.text = "";
+  // });
+
+  target3.onPointerClickObservable.add(() => {
+    desBoxText.innerHTML =
+      " <h2>Cage</h2><ul><li>Cage spheres soft finished, optimum process for Countertrack Rear Outboard Joint.</li></ul>";
+    // desBox.style.visibility = "visible";
+    // console.log(desBox.style.left);
+    image.src = "cage.JPG";
+
+    // canvasZone.style.width = "100%";
+    desBox.style.zIndex = 101;
+  });
 
   // rect1.linkOffsetY = -50;
 
   let animationGroup;
   let meshe;
-  // target1.alpha = 0;
-  // target2.alpha = 0;
-    document.getElementById("cameraBtn").addEventListener("click", function () {
-    
+  target1.alpha = 0;
+  target2.alpha = 0;
+  target3.alpha = 0;
+
+  document.getElementById("cameraBtn").addEventListener("click", function () {
     if (opened) {
-          desBox.style.zIndex = 0;
+      desBox.style.zIndex = 0;
       //   target1.alpha = 0;
       //   target2.alpha = 0;
       // animationGroups[0].stop();
@@ -356,7 +402,6 @@ const createScene = () => {
       // scene.beginDirectAnimation(camera, [cameraStartP, cameraStartT], 1, 60, false);
     }
 
- 
     // camera.target = new BABYLON.Vector3(0, 0, 0);
     // console.log(camera._currentTarget);
   });
@@ -384,20 +429,14 @@ const createScene = () => {
       // if (animationGroupS.isStarted) {
       //   let masterFrame = animationGroupS.animatables[0].masterFrame;
       //   scene.beginDirectAnimation(camera, [cameraStartP], 1, 120, false);
-
       //   animationGroupS.stop();
-
       //   animationGroupS.start(false, 1, masterFrame, 1);
       // } else {
       //   scene.beginDirectAnimation(camera, [cameraStartP], 1, 120, false);
-
       //   animationGroupS.stop();
-
       //   animationGroupS.start(false, 1, animationGroupS.to, 1);
       // }
-
       // // animationGroups[0].play();
-
       // opened = false;
     } else {
       //   target1.alpha = 1;
@@ -460,8 +499,12 @@ const createScene = () => {
 
   let animationGroupS = new BABYLON.AnimationGroup("GroupS");
   // let animationGroupA = new BABYLON.AnimationGroup("GroupA");
-  let sphereTargetHousing = BABYLON.MeshBuilder.CreateSphere("sphere", { diameter: 1 }, scene);
-  sphereTargetHousing.visibility = 0;
+  let sphereTarget1 = BABYLON.MeshBuilder.CreateSphere("sphere", { diameter: 1 }, scene);
+  sphereTarget1.visibility = 0;
+  let sphereTarget2 = BABYLON.MeshBuilder.CreateSphere("sphere", { diameter: 1 }, scene);
+  sphereTarget2.visibility = 0;
+  let sphereTarget3 = BABYLON.MeshBuilder.CreateSphere("sphere", { diameter: 1 }, scene);
+  sphereTarget3.visibility = 0;
 
   BABYLON.SceneLoader.ImportMesh(
     "",
@@ -474,32 +517,38 @@ const createScene = () => {
       // meshes[0].rotation = new BABYLON.Vector3(0.2, 0.5, 0);
 
       animationGroup = animationGroups;
+      // for (let i = 0; i < meshes.length; i++) {
+      //   meshes[i].visibility = 0;
+      // }
 
       meshe = meshes;
-      // for (let i = 0; i < meshes.length; i++) {
-      //   // console.log(meshes[i].material);
-      //   // if (meshes[i].material != null) {
-      //   //   meshes[i].material._roughness = 0.1;
-      //   // }
+      for (let i = 0; i < meshes.length; i++) {
+        // console.log(meshes[i].material);
+        // if (meshes[i].material != null) {
+        //   meshes[i].material._roughness = 0.1;
+        // }
 
-      //   if (meshes[i].name == "7010542778_primitive1") {
-      //     sphereTargetHousing.parent = meshes[i];
-      //     sphereTargetHousing.position.z = -0.04;
-      //     sphereTargetHousing.position.y = 0.03;
+        if (meshes[i].name == "3101076263") {
+          sphereTarget1.parent = meshes[i];
+          sphereTarget1.position.y = 0.02;
 
-      //     // console.log("Mesh position:", meshes[i].position);
-      //     // console.log("Mesh bounding info:", meshes[i].getBoundingInfo().boundingBox);
-      //     // console.log("Target position:", target2.centerY);
-      //     meshes[i].material.needDepthPrePass = true;
-      //     target2.linkWithMesh(sphereTargetHousing);
-      //     // target2.linkOffsetY = -150;
-      //   }
+          target1.linkWithMesh(sphereTarget1);
+        }
 
-      //   if (meshes[i].name == "7010542776_primitive0") {
-      //     target1.linkWithMesh(meshes[i]);
-      //     // target2.linkOffsetY = -150;
-      //   }
-      // }
+        if (meshes[i].name == "3100992525") {
+          sphereTarget2.parent = meshes[i];
+
+          target2.linkWithMesh(sphereTarget2);
+          // target2.linkOffsetY = -150;
+        }
+
+        if (meshes[i].name == "3100990767") {
+          sphereTarget3.parent = meshes[i];
+
+          target3.linkWithMesh(sphereTarget3);
+          // target2.linkOffsetY = -150;
+        }
+      }
 
       // let { min, max } = meshes[0].getHierarchyBoundingVectors();
 
@@ -543,21 +592,22 @@ const createScene = () => {
       // }
 
       scene.onBeforeRenderObservable.add(() => {
-        // if (opened) {
-        //   if (target1.alpha < 1) {
-        //     console.log(target1.alpha);
-        //     target1.alpha += 0.05;
-        //     target2.alpha += 0.05;
-        //   }
-        // } else if (target1.alpha > 0) {
-        //   console.log(target1.alpha);
-        //   target1.alpha -= 0.05;
-        //   target2.alpha -= 0.05;
-        //   if (target1.alpha < 0.01) {
-        //     target1.alpha = 0;
-        //     target2.alpha = 0;
-        //   }
-        // }
+        if (opened) {
+          if (target1.alpha < 1) {
+            target1.alpha += 0.05;
+            target2.alpha += 0.05;
+            target3.alpha += 0.05;
+          }
+        } else if (target1.alpha > 0) {
+          target1.alpha -= 0.05;
+          target2.alpha -= 0.05;
+          target3.alpha -= 0.05;
+          if (target1.alpha < 0.01) {
+            target1.alpha = 0;
+            target2.alpha = 0;
+            target3.alpha = 0;
+          }
+        }
       });
 
       scene.onPointerObservable.add((pointerInfo) => {
