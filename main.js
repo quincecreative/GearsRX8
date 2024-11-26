@@ -231,6 +231,7 @@ const createScene = () => {
   // });
 
   target1.onPointerClickObservable.add(() => {
+     if (opened) {
     desBoxText.innerHTML =
       " <h2>Outer Race</h2><ul><li>Outer Race, tracks and sphere finished by forging, leading to minimum manufacturing effort and optimized endurance performance</li></ul>";
     // desBox.style.visibility = "visible";
@@ -239,6 +240,7 @@ const createScene = () => {
 
     // canvasZone.style.width = "100%";
     desBox.style.zIndex = 101;
+     }
   });
   let target2 = new BABYLON.GUI.Rectangle();
   target2.width = "60px";
@@ -288,6 +290,7 @@ const createScene = () => {
   target2.addControl(text2);
 
   target2.onPointerClickObservable.add(() => {
+     if (opened) {
     desBoxText.innerHTML =
       " <h2>Inner Race</h2><ul><li>Inner race assembled with a grading for excellent backlash, aligned to 4.0 assembly technology</li></ul>";
     // desBox.style.visibility = "visible";
@@ -296,6 +299,7 @@ const createScene = () => {
 
     // canvasZone.style.width = "100%";
     desBox.style.zIndex = 101;
+     }
   });
 
   let target3 = new BABYLON.GUI.Rectangle();
@@ -355,6 +359,7 @@ const createScene = () => {
   // });
 
   target3.onPointerClickObservable.add(() => {
+     if (opened) {
     desBoxText.innerHTML =
       " <h2>Cage</h2><ul><li>Cage spheres soft finished, optimum process for Countertrack™ rear outboard joint</li></ul>";
     // desBox.style.visibility = "visible";
@@ -363,6 +368,7 @@ const createScene = () => {
 
     // canvasZone.style.width = "100%";
     desBox.style.zIndex = 101;
+     }
   });
 
   // rect1.linkOffsetY = -50;
