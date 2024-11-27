@@ -231,16 +231,16 @@ const createScene = () => {
   // });
 
   target1.onPointerClickObservable.add(() => {
-     if (opened) {
-    desBoxText.innerHTML =
-      " <h2>Outer Race</h2><ul><li>Outer Race, tracks and sphere finished by forging, leading to minimum manufacturing effort and optimized endurance performance</li></ul>";
-    // desBox.style.visibility = "visible";
-    // console.log(desBox.style.left);
-    image.src = "outerRace.JPG";
+    if (opened) {
+      desBoxText.innerHTML =
+        " <h2>Outer Race</h2><ul><li>Outer Race, tracks and sphere finished by forging, leading to minimum manufacturing effort and optimized endurance performance</li></ul>";
+      // desBox.style.visibility = "visible";
+      // console.log(desBox.style.left);
+      image.src = "outerRace.JPG";
 
-    // canvasZone.style.width = "100%";
-    desBox.style.zIndex = 101;
-     }
+      // canvasZone.style.width = "100%";
+      desBox.style.zIndex = 101;
+    }
   });
   let target2 = new BABYLON.GUI.Rectangle();
   target2.width = "60px";
@@ -290,16 +290,16 @@ const createScene = () => {
   target2.addControl(text2);
 
   target2.onPointerClickObservable.add(() => {
-     if (opened) {
-    desBoxText.innerHTML =
-      " <h2>Inner Race</h2><ul><li>Inner race assembled with a grading for excellent backlash, aligned to 4.0 assembly technology</li></ul>";
-    // desBox.style.visibility = "visible";
-    // console.log(desBox.style.left);
-    image.src = "innerRace.JPG";
+    if (opened) {
+      desBoxText.innerHTML =
+        " <h2>Inner Race</h2><ul><li>Inner race assembled with a grading for excellent backlash, aligned to 4.0 assembly technology</li></ul>";
+      // desBox.style.visibility = "visible";
+      // console.log(desBox.style.left);
+      image.src = "innerRace.JPG";
 
-    // canvasZone.style.width = "100%";
-    desBox.style.zIndex = 101;
-     }
+      // canvasZone.style.width = "100%";
+      desBox.style.zIndex = 101;
+    }
   });
 
   let target3 = new BABYLON.GUI.Rectangle();
@@ -359,16 +359,16 @@ const createScene = () => {
   // });
 
   target3.onPointerClickObservable.add(() => {
-     if (opened) {
-    desBoxText.innerHTML =
-      " <h2>Cage</h2><ul><li>Cage spheres soft finished, optimum process for Countertrack™ rear outboard joint</li></ul>";
-    // desBox.style.visibility = "visible";
-    // console.log(desBox.style.left);
-    image.src = "cage.JPG";
+    if (opened) {
+      desBoxText.innerHTML =
+        " <h2>Cage</h2><ul><li>Cage spheres soft finished, optimum process for Countertrack™ rear outboard joint</li></ul>";
+      // desBox.style.visibility = "visible";
+      // console.log(desBox.style.left);
+      image.src = "cage.JPG";
 
-    // canvasZone.style.width = "100%";
-    desBox.style.zIndex = 101;
-     }
+      // canvasZone.style.width = "100%";
+      desBox.style.zIndex = 101;
+    }
   });
 
   // rect1.linkOffsetY = -50;
@@ -711,26 +711,26 @@ const createScene = () => {
       });
     }
   );
-  let ssaoRatio = {
-    ssaoRatio: 0.5,
-    blurRatio: 1,
-  }; // Ratio of the SSAO post-process, in a lower resolution
+  // let ssaoRatio = {
+  //   ssaoRatio: 0.5,
+  //   blurRatio: 1,
+  // }; // Ratio of the SSAO post-process, in a lower resolution
 
-  let ssao = new BABYLON.SSAO2RenderingPipeline("ssao2", scene, ssaoRatio, [camera]);
-  ssao.totalStrength = 1.6;
-  ssao.base = 0;
-  ssao.radius = 1;
-  ssao.epsilon = 0.01;
-  ssao.samples = 25;
-  console.log(ssao);
-  scene.prePassRenderer.samples = 25;
+  // let ssao = new BABYLON.SSAO2RenderingPipeline("ssao2", scene, ssaoRatio, [camera]);
+  // ssao.totalStrength = 1.6;
+  // ssao.base = 0;
+  // ssao.radius = 1;
+  // ssao.epsilon = 0.01;
+  // ssao.samples = 25;
+  // console.log(ssao);
+  // scene.prePassRenderer.samples = 25;
 
-  let defaultRendering = new BABYLON.DefaultRenderingPipeline("defRend", true, scene);
+  // let defaultRendering = new BABYLON.DefaultRenderingPipeline("defRend", true, scene);
 
-  defaultRendering.fxaaEnabled = true;
-  defaultRendering.samples = 8;
+  // defaultRendering.fxaaEnabled = true;
+  // defaultRendering.samples = 8;
 
-  console.log(defaultRendering);
+  // console.log(defaultRendering);
 
   // // Attach camera to the SSAO render pipeline
   // scene.postProcessRenderPipelineManager.attachCamerasToRenderPipeline("ssao", camera);

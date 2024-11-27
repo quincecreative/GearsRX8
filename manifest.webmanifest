@@ -1,0 +1,15 @@
+{
+  "background_color": "white",
+  "description": "RX8 model",
+  "display": "fullscreen",
+  "icons": [
+    {
+      "src": "Icon.png",
+      "sizes": "150x150",
+      "type": "image/png"
+    }
+  ],
+  "name": "RX8",
+  "short_name": "RX8",
+  "start_url": "/RX8/index.html"
+}
