@@ -534,6 +534,10 @@ const createScene = () => {
         //   meshes[i].material._roughness = 0.1;
         // }
 
+        if (meshes[i].name == "3101175957") {
+          meshes[i].visibility = 0;
+        }
+
         if (meshes[i].name == "3101076263") {
           sphereTarget1.parent = meshes[i];
           sphereTarget1.position.y = 0.02;
